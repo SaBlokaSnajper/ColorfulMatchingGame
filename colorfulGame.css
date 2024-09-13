@@ -28,7 +28,7 @@ h1 {
   font-size: 30px;
   padding-right: 75px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1300px) {
   h1 {
     font-size: 60px;
     padding-right: 50px;
