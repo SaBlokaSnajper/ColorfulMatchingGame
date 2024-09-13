@@ -28,10 +28,23 @@ h1 {
   font-size: 30px;
   padding-right: 75px;
 }
-@media (max-width: 1200px) {
-  .services-area {
-    display: flex;
-    flex-flow: column-reverse;
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 60px;
+    padding-right: 50px;
+  }
+  .container {
+    position: absolute;
+    top: -250px;
+    padding-left: 245px;
+    z-index: -100;
+  }
+  .startMain {
+    position: absolute;
+    bottom: 450px;
+  }
+  .body {
+    display: fixed;
   }
 }
 
