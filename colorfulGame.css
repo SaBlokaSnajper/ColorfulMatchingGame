@@ -28,6 +28,12 @@ h1 {
   font-size: 30px;
   padding-right: 75px;
 }
+@media (max-width: 1200px) {
+  .services-area {
+    display: flex;
+    flex-flow: column-reverse;
+  }
+}
 
 #game-container {
   display: grid;

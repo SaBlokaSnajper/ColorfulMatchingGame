@@ -75,7 +75,7 @@ function checkMatch() {
     card2.style.backgroundColor = "#ddd";
   }
   if (score === 12) {
-    alert("Congratulations!");
+    alert("Congratulations! You Beat Vid's First Game!");
     location.reload();
   }
   selectedCards = []; // Reset the selected cards array
