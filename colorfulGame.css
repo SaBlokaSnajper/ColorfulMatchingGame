@@ -25,20 +25,24 @@ body {
 }
 
 h1 {
-  color: #fff;
+  color: #00ff15;
   text-align: center;
   font-size: 30px;
   padding-right: 75px;
 }
+#red {
+  color: red !important;
+}
 @media (max-width: 1300px) {
   h1 {
-    font-size: 60px;
-    padding-right: 50px;
+    font-size: 80px;
+    padding-right: 0px;
+    touch-action: manipulation;
   }
   .container {
     position: absolute;
     top: -250px;
-    padding-left: 245px;
+    padding-left: 270px;
     z-index: -100;
     touch-action: manipulation;
   }
@@ -46,10 +50,12 @@ h1 {
     position: absolute;
     bottom: 350px;
     padding-top: 40px;
+    padding-right: 20px;
   }
   #game-container {
     grid-auto-columns: max-content;
     grid-auto-rows: max-content;
+    touch-action: manipulation;
   }
   #score {
     margin-bottom: -10px;
