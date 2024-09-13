@@ -3,6 +3,8 @@ body {
   margin: 0;
   background-color: #3498db;
   box-sizing: border-box;
+  overflow: hidden;
+  touch-action: manipulation;
 }
 
 .container {
@@ -38,10 +40,19 @@ h1 {
     top: -250px;
     padding-left: 245px;
     z-index: -100;
+    touch-action: manipulation;
   }
   .startMain {
     position: absolute;
-    bottom: 450px;
+    bottom: 350px;
+    padding-top: 40px;
+  }
+  #game-container {
+    grid-auto-columns: max-content;
+    grid-auto-rows: max-content;
+  }
+  #score {
+    margin-bottom: -10px;
   }
   .body {
     display: fixed;
@@ -55,6 +66,7 @@ h1 {
   background-color: #fff;
   padding: 10px;
   border-radius: 10px;
+  touch-action: manipulation;
 }
 
 .card {

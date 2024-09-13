@@ -105,6 +105,7 @@ function startGameTimer() {
       clearInterval(gameInterval); // Stop the timer
       alert("Game Over!");
       startbtn.disabled = false; // Enable the start button again
+      location.reload();
     }
   }, 1000);
 }
