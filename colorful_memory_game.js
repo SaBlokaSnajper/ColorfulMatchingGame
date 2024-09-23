@@ -17,6 +17,7 @@ let selectedCards = [];
 let score = 0;
 let timeLeft = 60;
 let gameInterval;
+let isCheckingMatch = false;
 
 const startbtn = document.getElementById("startbtn");
 const gameContainer = document.getElementById("game-container");
@@ -46,7 +47,11 @@ function shuffle(array) {
 // Function to handle card click
 function handleCardClick(event) {
   const card = event.target;
-  if (!card.classList.contains("card") || card.classList.contains("matched")) {
+  if (
+    isCheckingMatch ||
+    card.classList.contains("matched") ||
+    selectedCards.includes(card)
+  ) {
     return; // Ignore if the card is already matched or not a card
   }
 
@@ -56,6 +61,7 @@ function handleCardClick(event) {
 
   // When two cards are selected, check for a match
   if (selectedCards.length === 2) {
+    isCheckingMatch = true; // Prevent further clicks during the checkMatch function execution
     setTimeout(checkMatch, 300);
   }
 }
@@ -68,7 +74,8 @@ function checkMatch() {
     card2.classList.add("matched");
     score++;
     scoreElement.textContent = `Score: ${score} Matches`;
-  } else {
+  } // Skip the rest of the function execution if a match is found
+  else {
     card1.textContent = "?";
     card2.textContent = "?";
     card1.style.backgroundColor = "#ddd";
@@ -79,6 +86,7 @@ function checkMatch() {
     location.reload();
   }
   selectedCards = []; // Reset the selected cards array
+  isCheckingMatch = false; // Unlock clicks after the check is done
 }
 
 // Function to start the game
